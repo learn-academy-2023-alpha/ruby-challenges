@@ -33,26 +33,34 @@ my_phone.delete(:angrybirds)
 # As a developer, I can use an enumerable method to return information about all of my_phone's applications.
 
 def phone_apps hash
-
     hash.map do |key,value|
         "#{key} is an app that lets you #{value}!"
-
-
-
     end
-
-
-
-
 end
-p phone_apps (my_phone)
+# p phone_apps (my_phone)
 
 # 🏔 Stretch Goals
 # As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
+def capitalizer hash
+    hash.map do |key, value|
+        "#{key.capitalize} is an app that lets you #{value}!"
+    end
+end
 
 
 # As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each app.
+def capitalizer hash
+    hash.map do |key, value|
+        "#{key.capitalize} is an app that lets you #{value}!"
+    end
+end
 
 
+# p my_phone
 
-p my_phone
+def practice hash
+    hash.map do |key, value|
+        "#{key} is an app that lets you #{value.reverse}!"
+    end
+end
+p practice(my_phone)
