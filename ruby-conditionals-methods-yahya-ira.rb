@@ -81,7 +81,22 @@
 # As a developer, you have been tasked with creating the user registration for a secure web site. To test your code, enter the user ID and password in the terminal to find out if they are acceptable. The user ID and password must adhere to the to following criteria:
 
 # User ID and password cannot be the same.
+p 'What is your user id?'
+user_id = gets.chomp
+p 'Please enter your password'
+password = gets.chomp
 # User ID and password must be at least six characters long.
+if user_id.length >= 6 #!user_id.include'!','#','$',' '
+    p user_id
+else
+    p 'invalid user id'
+end
+
+if password != 'password' && password.length >= 6 && password =~ /\d/ #password.include '!', '#', '$'
+p password
+else
+    p "not a valid password"
+end
 # Password must contain at least one of: !#$
 # User ID cannot contain the following characters: !#$ or spaces
 # Password cannot be the word "password".
