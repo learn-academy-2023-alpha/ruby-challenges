@@ -41,16 +41,63 @@ nums_range = 1..20
 # ["CJ", "JACOB"]
 
 # Create a method that takes in an array of numbers and returns the largest number in the array.
-def largest_number array
-    array.select do |value|
-        value.sort.last
-    end
+# def largest_number array
+#     array.sort.last 
+# end
+
+# p largest_number([4, 5, 8, 10, 2, 6, 7])
+
+# # Create a method that takes in an array of words and returns the word with the least number of characters.
+# input- an array of strings 
+# output: the shortest word
+# Pseudo Code:
+# my_strings = ['hey','you' ,'there', 'are', 'you', 'gonna', 'eat','z', 'my ','food']
+
+# def shortest  array
+
+#     array.min{| a,b| a.length<=> b.length}
+# end
+
+
+# p shortest(my_strings)  
+
+# Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
+
+# largestnumber = [4, 7, 8, 10, 2, 6, 5]
+
+# def only_odds array
+#     array.sort.select do |value|
+#     value.odd?
+#     end
+# end
+
+# p only_odds(largestnumber)
+
+
+
+# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercase letters should be returned lowercased and all lowercased letters should be returned in uppercase letters.
+
+
+my_name = 'Jacob'
+
+
+def reversecase array
+
+    array.map do |value|
+
+        value.swapcase
+
+
+        end
+
+
+
 end
 
-p largest_number([4, 5, 8, 10, 2, 6, 7])
-# Create a method that takes in an array of words and returns the word with the least number of characters.
-# Create a method that takes in an array of numbers and returns only the odd numbers sorted from least to greatest.
-# Create a method that takes in an array of strings and returns all the strings in reverse casing. All uppercase letters should be returned lowercased and all lowercased letters should be returned in uppercase letters.
+
+p reversecase(['Cj', 'and' ,'Jacob' ])
+
+
 # Create a method that will take in an array of numbers and return an array with the remainder of each number when divided by 2.
 # Create a method that will take in a range of letters and return an array with all the letters capitalized.
 # 🏔 Stretch Goals
