@@ -34,12 +34,47 @@
 
 
 # ✂️ Challenge: Rock, Paper, Scissors
+
+
 # As the first user, I can see a prompt in the terminal to enter my name.
+# p "what's your name"
+# your_name = gets.chomp 
 # As the second user, I can see a prompt in the terminal to enter my name.
+# p "what's your name"
+# second_name = gets.chomp 
+
 # As the first user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+# p "Rock? Paper? Scissors? ... Shoot"
+#  player1_choice = gets.chomp.capitalize
+
 # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
+# p "Rock? Paper? Scissors? ... Shoot"
+#  player2_choice = gets.chomp.capitalize
+
+
 # As a user, I can see a message in the terminal depicting which user won the round.
-# As a user, I can see a message in the terminal noting if there was a tie.
+# if player1_choice == "Rock" && player2_choice == "Scissors"
+#     p "Player 1 is the winner"
+   
+# elsif player1_choice == "Rock" && player2_choice == "Paper"
+#     p "Player 2 is the winner"
+    
+    # As a user, I can see a message in the terminal noting if there was a tie.
+# elsif player1_choice == player2_choice
+#     p "Draw No Winners"
+    
+# elsif    player1_choice == "Scissors" && player2_choice == "Paper"
+#     p "Player 1 is the winner"
+    
+# elsif   player1_choice == "Paper" && player2_choice == "Scissors"
+#     p "Player 2 is the winner" 
+    
+# elsif player1_choice == "Paper" && player2_choice == "Rock"
+#     p "player 1 is the winner"
+    
+# else p "Oh no choose again"
+
+# end
 
 
 # ✅ Challenge: Password Checker
