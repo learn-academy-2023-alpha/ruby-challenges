@@ -77,6 +77,7 @@ user_name_2 = gets.chomp
 
 p 'user 1: choose rock, paper or scissors'
 user_1_choice = gets.chomp
+
 # As the second user, I can see a prompt in the terminal asking me to type either "rock", "paper", or "scissors".
 
 p 'user 2: choose rock, paper or scissors'
@@ -92,15 +93,15 @@ user_2_choice = gets.chomp
 # paper > rock
 # scissors > paper
 
-# def rock_paper_scissors(name1, name2, name1choice, name2choice)
-#     if name1choice == 'rock' && name2choice == 'scissors' || name1choice == 'paper' && name2choice == 'rock' || name1choice == 'scissors' && name2choice == 'paper'
-#         "#{name1} wins"
-#     else 
-#         "#{name2} wins"
-#     end
-# end
+def rock_paper_scissors(name1, name2, name1choice, name2choice)
+    if name1choice == 'rock' && name2choice == 'scissors' || name1choice == 'paper' && name2choice == 'rock' || name1choice == 'scissors' && name2choice == 'paper'
+        "#{name1} wins"
+    else 
+        "#{name2} wins"
+    end
+end
 
-# p rock_paper_scissors(user_name_1, user_name_2, user_1_choice, user_2_choice)
+p rock_paper_scissors(user_name_1, user_name_2, user_1_choice, user_2_choice)
 
 # As a user, I can see a message in the terminal noting if there was a tie.
 
@@ -120,8 +121,35 @@ p rock_paper_scissors(user_name_1, user_name_2, user_1_choice, user_2_choice)
 # As a developer, you have been tasked with creating the user registration for a secure web site. To test your code, enter the user ID and password in the terminal to find out if they are acceptable. The user ID and password must adhere to the to following criteria:
 
 # User ID and password cannot be the same.
-# User ID and password must be at least six characters long.
+# User ID and password must be at least six characters long. 
 # Password must contain at least one of: !#$
 # User ID cannot contain the following characters: !#$ or spaces
 # Password cannot be the word "password".
 # User password must contain at least one number.
+
+    # have user enter a userID and password
+    # assign inputs to variables 
+    # create def called registration_info
+    # if/else conditions:
+        # if userID == pass, "try again"
+        # if userID.length && pass.length < 6, "try again"
+        # if pass.include?('!' || '#' || '$') == false, "try again"
+        # if userID.include?('!' || '#' || '$' || ' '), "try again"
+        # if pass == "password", "try again"
+        # if pass.numeric? == false, "try again"
+    # return "accepted"
+
+p 'Please Enter a Valid User ID:'
+user_id = gets.chomp
+p 'Please Enter a Valid Password:'
+password = gets.chomp
+
+def registration_info (id, pass)
+    if id == pass || id.length && pass.length < 6 || pass.include?('!' || '#' || '$') == false || id.include?('!' || '#' || '$' || ' ') || pass == "password" || pass.include?('1'||'2'||'3'|| '4'||'5'||'6'||'7'||'8'||'9'||'0') == false
+        "not accepted. try again"
+    else
+        "accepted"
+    end
+end
+
+p registration_info(user_id, password)
