@@ -120,13 +120,8 @@ p rock_paper_scissors(user_name_1, user_name_2, user_1_choice, user_2_choice)
 # As a developer, you have been tasked with creating the user registration for a secure web site. To test your code, enter the user ID and password in the terminal to find out if they are acceptable. The user ID and password must adhere to the to following criteria:
 
 # User ID and password cannot be the same.
-
 # User ID and password must be at least six characters long.
-
 # Password must contain at least one of: !#$
-
 # User ID cannot contain the following characters: !#$ or spaces
-
 # Password cannot be the word "password".
-
 # User password must contain at least one number.
