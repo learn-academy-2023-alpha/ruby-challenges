@@ -36,5 +36,19 @@ end
 
 # 🏔 Stretch Goals
 # As a developer, I can create a custom method that takes in my_phone and returns an array with the app name capitalized and information about each phone app.
+def capitalized_apps hash
+    hash.map do |key, value|
+        "#{key.capitalize}: #{value}!"
+    end
+end
+p capitalized_apps(my_phone)
+
+
 
 # As a developer, I can create a custom method that takes in my_phone and returns an array with a sentence about the name of each app.
+def about_apps hash
+    hash.map do |key, value|
+        "In #{key}, you have the ability to check #{value}"
+    end
+end
+p about_apps(my_phone)
