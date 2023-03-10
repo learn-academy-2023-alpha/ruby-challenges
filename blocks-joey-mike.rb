@@ -60,9 +60,7 @@ end
 def odd_sorted array 
     array.sort!
     array.select do |value|
-        if value % 2 !=0
-            value
-        end    
+        value.odd?
     end    
 end
 
