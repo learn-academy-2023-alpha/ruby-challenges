@@ -96,9 +96,4 @@ end
 
 rock_paper_scissors
 
-
-
-
-
-
 # As a user, I can see a message in the terminal noting if there was a tie.
