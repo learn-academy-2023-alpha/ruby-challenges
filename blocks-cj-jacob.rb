@@ -138,4 +138,14 @@ nums_range = 1..20
 
 
 # Create a method that takes in an array of words and returns all the words that start with a particular letter. Example: Given the array ['Apple', 'Avocado', 'Banana', 'Mango'] and the letter 'a' the method should return ['Apple', 'Avocado']. With the same method, given the letter 'm' should return ['Mango'].
+
+def part_letter (array, letter)
+    array.select do |value|
+        value.include?(letter).index(0 == letter)
+    end
+end
+
+p part_letter(['Apple', 'Avocado', 'Banana', 'Mango'], 'a')
+
+
 # Create a method that takes in an array of mixed data types and returns an array without any false, null, 0, or blank values.
