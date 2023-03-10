@@ -49,12 +49,48 @@ p dishes.get_task_status
 
 
 
-# For the following ColorPalette challenge use initialize and attr_accessor methods in your class.
-# As a developer, I can create a class called ColorPalette.
-# As a developer, I can create three instances (objects) of class ColorPalette.
+# ✅ For the following ColorPalette challenge use initialize and attr_accessor methods in your class.
+# ✅ As a developer, I can create a class called ColorPalette.
+# ✅ As a developer, I can create three instances (objects) of class ColorPalette.
 # e.g green = ColorPalette.new
-# As a developer, I can initialize each instance of the class ColorPalette with three colors.
+# ✅ As a developer, I can initialize each instance of the class ColorPalette with three colors.
 # e.g. green = ColorPalette.new('Chartreuse', 'Kelly', 'Seafoam')
-# As a developer, I can print the value of each individual color.
-# As a developer, I can create a method called all_colors that when called will print a sentence telling me the three colors of a given palette.
-# As a developer, I can change one or more colors of a given palette.
+# ✅ As a developer, I can print the value of each individual color.
+# ✅ As a developer, I can create a method called all_colors that when called will print a sentence telling me the three colors of a given palette.
+# ✅ As a developer, I can change one or more colors of a given palette.
+
+
+class ColorPalette
+    attr_accessor :color, :object1, :object2, :object3
+     def initialize(color, object1, object2, object3)
+        @color = color
+        @object1 = object1
+        @object2 = object2
+        @object3 = object3
+     end
+     
+     def get_color_data
+        "#{object1}, #{object2}, #{object3}, are all color #{color}"
+     end
+
+     def change_object1(object)
+        @object1 = object
+     end
+
+     def change_object2(object)
+        @object2 = object
+     end
+
+     def change_object3(object)
+        @object3 = object
+     end
+end
+
+green = ColorPalette.new("Green", "Grass", "Tree Leaves", "Code Comments")
+p green.get_color_data
+green.change_object1("Shrek")
+p green.get_color_data
+green.change_object2("Green light")
+p green.get_color_data
+green.change_object3("Hulk")
+p green.get_color_data
