@@ -4,25 +4,38 @@ require 'date'
 
 class Task 
     attr_accessor :title, :description, :status, :due
-    def initialize description = 'description'
+    def initialize title = 'title', description = 'description', due = 'due'
         @title = title
         @description = description
         @status = 'in progress'
-        @due = 'due date:'
+        @due = due
     end
 
     def do_task 
         @status = 'done'
     end
 
-    def due_date
-        @due = Date.today + 2
+    def task_list
+        if @status == 'done'
+            "The #{@title} is #{@status}"
+        else "The #{@title} is #{@status}"
+        end
     end
+
+    # def due_date
+    #     @due = Date.today + 2
+    # end
 end
 
 # p Date.today + 2
 
+laundry = Task.new('Laundry', 'wash clothes', Date.today + 2)
+p laundry
+laundry.do_task
+p laundry.task_list
 
+dishes = Task.new('Dishes', 'wash dishes', Date.today)
+p dishes
 
 
 
@@ -55,8 +68,17 @@ end
 
 # 🏔 Stretch Goals
 # As a developer, I can add all of my Tasks to a TaskList.
+# 0 examples, 0 failures, 1 error occurred outside of examples
+# 6 examples, 0 failures
+
 # As a developer with a TaskList, I can print the completed items.
 # As a developer with a TaskList, I can print the incomplete items.
 # As a developer with a TaskList, I can list all the not completed items that are due today.
 # As a developer with a TaskList, I can list all the incomplete items in order of due date.
 # As a developer with a TaskList with and without due dates, I can list all the not completed items in order of due date, and then the items without due dates.
+
+# class TaskList < Task
+#     def initialize
+#         super(description)
+#     end
+# end
