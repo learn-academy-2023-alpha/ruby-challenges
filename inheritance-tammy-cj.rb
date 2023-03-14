@@ -24,10 +24,12 @@ class Animal
     end
 
     def get_animal_wellbeing
-        if @alive
+        if  @age == @dying_age
+            "This animal was #{age} year/s old, and is NOT alive."
+            # "This animal is #{age} year/s old, and is alive."
+        elsif @alive
             "This animal is #{age} year/s old, and is alive."
-        else
-            "This animal is #{age} year/s old, and is NOT alive."
+            # "This animal was #{age} year/s old, and is NOT alive."
         end
     end
 end
@@ -83,7 +85,7 @@ end
 
 # As a developer, I can see that my Salmon is cold-blooded.
 sockeye = Salmon.new('Sockeye', 4)
-p sockeye.cold_blooded #true
+# p sockeye.cold_blooded #true
 
 # As a developer, I can age my Salmon up.
 sockeye.age_up
@@ -95,21 +97,55 @@ p sockeye.get_salmon_info
 # "This animal is 1 year/s old, and is alive.This animal is 1 year/s old, and is alive.This fish is cold-blooded.It is a Sockeye salmon."
 
 # As a developer, if my Salmon reaches the ripe old age of 4, I can make it die peacefully after a full and happy life.
+# Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 sockeye.age_up
 sockeye.age_up
 sockeye.age_up
 p sockeye.age
-p sockeye.dying_age
+# p sockeye.dying_age
 p sockeye.get_salmon_info
+p sockeye.dying_age
 
 
-# Hint: You will need a method that changes the status of alive in the initialize method of Animal.
+
 # As a developer, I can create a Mammal that inherits from Animal.
 # As a developer, I can initialize all of my Mammals to be warm_blooded.
+
+class Mammal < Animal
+    attr_accessor :warm_blooded
+    def initialize(dying_age)
+        super(dying_age)
+        @warm_blooded = true
+    end
+    def get_mammal_info
+        get_animal_wellbeing + 'This animal is warm-blooded'
+    end
+end
+
+# As a developer, I can create a Bear that inherits from Mammal.
+class Bear < Mammal
+    def initialize(dying_age)
+        super(dying_age)
+    end
+
+end
+
+
 # As a developer, I can create a Bear that inherits from Mammal.
 # As a developer, I can age my Bear up.
+grizzly = Bear.new(20)
+grizzly.age_up
+p grizzly.age
+
 # As a developer, I can see a message that tells me all of my Bear's information.
+p grizzly.get_mammal_info
 # As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
+
+20.times do 
+    grizzly.age_up
+end
+p grizzly.age
+p grizzly.get_mammal_info
 # Hint: You will need a method that changes the status of alive in the initialize method of Animal.
 # As a developer, I can create a Mammal of my choice.
 # As a developer, I can interact with the new Mammal via various methods.
