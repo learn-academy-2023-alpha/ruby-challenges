@@ -90,13 +90,69 @@ p sockeye
 4.times {atlantic.age_up}
 p atlantic
 p steelhead.blooded
+# As a developer, I can create a Mammal that inherits from Animal.
+# As a developer, I can initialize all of my Mammals to be warm_blooded.
+# As a developer, I can create a Bear that inherits from Mammal.
+# As a developer, I can age my Bear up.
+# As a developer, I can see a message that tells me all of my Bear's information.
+# As a developer, if my Bear turns 20 years old, I can make it die peacefully after a full and happy life.
+# Hint: You will need a method that changes the status of alive in the initialize method of Animal.
+# As a developer, I can create a Mammal of my choice.
+# As a developer, I can interact with the new Mammal via various methods.
+# As a developer, I can see a message that tells me all of my new Mammal's information.
+class Mammal < Animal
+      def initialize()
+            super()
+            @blooded = 'warm'
+      end
 
-# class Mammal < Animal
+end
 
-# class Bear < Mammal
+class Bear < Mammal
+      def initialize()
+            super()
+            @life_span = 20
 
-# end
+      end
+      
+end
+baloo = Bear.new
+# p baloo
+# p 22.times{baloo.age_up}
+# p baloo
 
-# class Tiger < Mammal
+class Tiger < Mammal
+      def initialize()
+            super()
+            @life_span = 10
+      end
+end
+sharkan = Tiger.new
+p sharkan
+# 🏔 Stretch Goals
+# As a developer, I can keep a collection of two of each Animal.
+# Hint: You'll want to add your Animals into an array.
+# As a developer, I can sort my collection of Animals based on age.
+# Hint: Find out how the spaceship operator can help you with an array.
+# As a developer, I can utilize a Ruby module to help DRY up my code. I can create a swim method inside of my module that will apply to Animals who can swim. This method should return "I can swim!"
+# Hint: Look into module mix ins. Since not all animals can swim, only certain Animals will have access to this module.
 
-# end
+collection = []
+2.times {
+      collection.push(Salmon.new)
+}
+2.times {
+      collection.push(Bear.new)
+}
+2.times {
+      collection.push(Tiger.new)
+}
+
+4.times{collection[0].age_up}
+1.times{collection[1].age_up}
+2.times{collection[2].age_up}
+5.times{collection[3].age_up}
+3.times{collection[4].age_up}
+2.times{collection[5].age_up}
+collection.sort_by{|a| a.age}
+p collection
