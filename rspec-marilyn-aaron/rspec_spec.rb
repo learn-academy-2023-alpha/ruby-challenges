@@ -53,3 +53,7 @@ describe Task do
         expect(TaskList).to eq({"Sweeping" =>"in progress", "Dishes"=>"in progress", "Laundry"=>"in progress", "Cleaning Toilets"=>"in progress"})
     end
 end
+<<<<<<< HEAD
+=======
+
+>>>>>>> f1f69c9ed8f42c3b19ac6b8089d2aac597b3a7c4

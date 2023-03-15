@@ -186,6 +186,11 @@ p maple.get_dog_info # -> "The Golden Doodle has been pet 10 times. She is very 
 # 🏔 Stretch Goals
 # As a developer, I can keep a collection of two of each Animal.
 # Hint: You'll want to add your Animals into an array.
+animals_array = []
+animals_array << salmon
+
+p animals_array
+
 # As a developer, I can sort my collection of Animals based on age.
 # Hint: Find out how the spaceship operator can help you with an array.
 # As a developer, I can utilize a Ruby module to help DRY up my code. I can create a swim method inside of my module that will apply to Animals who can swim. This method should return "I can swim!"
