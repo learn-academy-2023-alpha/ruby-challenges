@@ -29,12 +29,24 @@ describe 'Task' do
     end
     it 'has a due date' do
         my_task = Task.new
-        expect(my_task.due).to eq 'due date:'
+        expect(my_task.due).to eq 'due'
         expect(my_task.due).to be_a String
-        laundry = Task.new(Date.today + 2)
-        # expect(laundry.due).to eq {Date.today + 2}
-        expect{laundry.due_date}.to change {laundry.due}.from('due date:').to(Date.today + 2)
+        laundry = Task.new('wash clothes', Date.today + 2)
+        expect(laundry.due).to eq Date.today + 2
+        # expect{laundry.due_date}.to change {laundry.due}.from('due date:').to(Date.today + 2)
 
     end
 
 end
+
+
+# describe TaskList do
+#     it 'has to be real' do
+#         expect{TaskList.new}.to_not raise_error
+#     end
+
+#     it 'can be passed tasks' do
+#         my_task = TaskList.new
+#         expect(my_task).to eq ''
+#     end
+# end
